@@ -1,0 +1,140 @@
+html {
+  background: linear-gradient(to bottom right, #ce3c3f, #310909);
+  background-repeat: no-repeat;
+}
+
+.head {
+  background: rgba(0, 0, 0, 0.64);
+  height: 137px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 2;
+}
+
+.logo-place {
+  background: linear-gradient(to right, rgba(20, 4, 4, 1), #461415);
+  height: 137px;
+  width: 141px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav {
+  text-decoration: none;
+  position: relative;
+  margin: 0 10px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+  transition: transform 0.5s ease;
+}
+
+.nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: -1;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.nav:hover {
+  transform: scale(110%);
+}
+
+.nav:hover::before {
+  background-color: rgba(255, 255, 255, 0.17);
+  filter: blur(20px);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  max-height: 100%;
+  justify-content: space-between;
+}
+
+.text-block {
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.text-block h1 {
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.text-block div {
+  width: auto;
+  margin-top: 10px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+}
+
+.text-block p {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.text-block button {
+  padding: 10px 30px;
+  background-color: #d07e3d;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.1s;
+}
+
+.text-block button:hover {
+  transform: scale(110%);
+  box-shadow: 0px 0px 20px #d07e3d;
+}
+
+.graphics-container {
+  background-image: url("../pics/car.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 105vh;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(20px 0px 20px rgba(0, 0, 0, 0.608));
+}
+
+.graphics-vector {
+  position: absolute;
+  left: 20vh;
+  background-image: url("../pics/road.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vh;
+  height: 100vh;
+  z-index: -1;
+}

@@ -8,6 +8,10 @@ body {
   flex-direction: column;
 }
 
+.home-icon {
+  display: none;
+}
+
 .head {
   background: rgba(0, 0, 0, 0.64);
   height: 137px;
@@ -159,21 +163,34 @@ footer > p {
   }
 
   .photo img {
-    width: 80vw;
-    max-width: 50vw;
+    width: 70%;
   }
 
   .photo p {
     line-height: 6vw;
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   .photo {
     height: auto;
   }
 
+  .home-icon {
+    display: block;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+  }
+
+  .home-icon img {
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+  }
+
   h1 {
-    font-size: 4vw;
+    font-size: 6vw;
     margin-bottom: 0vw;
   }
 

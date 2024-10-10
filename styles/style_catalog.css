@@ -10,6 +10,10 @@ body {
   flex-direction: column;
 }
 
+.home-icon {
+  display: none;
+}
+
 .head {
   background: rgba(0, 0, 0, 0.64);
   height: 137px;
@@ -217,6 +221,20 @@ footer > p {
     grid-auto-rows: auto;
     margin-top: 60px;
     width: 80%;
+  }
+
+  .home-icon {
+    display: block;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+  }
+
+  .home-icon img {
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
   }
 
   .item {

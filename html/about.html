@@ -20,21 +20,24 @@
   <body>
     <header>
       <div class="head">
-        <a href="../index.html" class="home-icon">
-          <img src="../pics/home.svg" alt="home" />
-        </a>
         <div class="logo-place">
           <a href="../index.html">
             <img src="../pics/logo.svg" alt="logo" />
           </a>
         </div>
-        <div class="nav-menu">
+        <div class="nav-menu" id="navMenu">
+          <a href="../index.html" class="home-icon">
+            <img src="../pics/home.svg" alt="home" />
+          </a>
           <a href="catalog.html" class="nav">Модели</a>
           <a href="news.html" class="nav">Новости</a>
           <a href="about.html" class="nav">О нас</a>
           <a href="services.html" class="nav">Сервисы</a>
           <a href="author.html" class="nav">Автор</a>
         </div>
+        <button class="menu-button" id="menuButton">
+          <img src="../pics/menu.svg" alt="menu" />
+        </button>
       </div>
     </header>
     <main>
@@ -93,4 +96,12 @@
       </p>
     </footer>
   </body>
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navMenu = document.getElementById("navMenu");
+
+    menuButton.addEventListener("click", function () {
+      navMenu.classList.toggle("open");
+    });
+  </script>
 </html>

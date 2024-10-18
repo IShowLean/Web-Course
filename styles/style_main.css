@@ -14,8 +14,11 @@ html {
   z-index: 2;
 }
 
+.menu-button {
+  display: none;
+}
+
 .logo-place {
-  background: linear-gradient(to right, rgba(20, 4, 4, 1), #461415);
   height: 137px;
   width: 141px;
   display: flex;
@@ -149,6 +152,12 @@ main {
   }
 }
 
+@media (min-height: 1100px) {
+  .graphics-vector {
+    display: none;
+  }
+}
+
 @media (max-width: 1350px) {
   .head {
     height: 0px;
@@ -159,7 +168,29 @@ main {
     display: none;
   }
 
+  .menu-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    padding: 0;
+  }
+
+  .menu-button img {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
   .nav-menu {
+    display: none;
     flex-direction: column;
     align-items: center;
     position: fixed;

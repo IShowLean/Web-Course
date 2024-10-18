@@ -65,6 +65,10 @@ body {
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
+.menu-button {
+  display: none;
+}
+
 .nav:hover {
   transform: scale(110%);
 }
@@ -194,13 +198,34 @@ footer > p {
     display: none;
   }
 
-  .nav-menu {
-    flex-direction: column;
-    align-items: flex-center;
+  .menu-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     position: fixed;
-    top: 100px;
-    left: 0;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    padding: 0;
+  }
+
+  .menu-button img {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
     top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.64);
     width: 100%;
     z-index: 1;
@@ -226,14 +251,14 @@ footer > p {
   .home-icon {
     display: block;
     position: fixed;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 20px;
     z-index: 3;
   }
 
   .home-icon img {
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     cursor: pointer;
   }
 

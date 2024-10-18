@@ -35,13 +35,16 @@
             <img src="pics/logo.svg" alt="logo" />
           </a>
         </div>
-        <div class="nav-menu">
-          <a href="html/catalog.html" class="nav">Модели</a>
-          <a href="html/news.html" class="nav">Новости</a>
-          <a href="html/about.html" class="nav">О нас</a>
-          <a href="html/services.html" class="nav">Сервисы</a>
-          <a href="html/author.html" class="nav">Автор</a>
+        <div class="nav-menu" id="navMenu">
+          <a href="/html/catalog.html" class="nav">Модели</a>
+          <a href="news.html" class="nav">Новости</a>
+          <a href="/html/about.html" class="nav">О нас</a>
+          <a href="services.html" class="nav">Сервисы</a>
+          <a href="/html/author.html" class="nav">Автор</a>
         </div>
+        <button class="menu-button" id="menuButton">
+          <img src="../pics/menu.svg" alt="menu" />
+        </button>
       </div>
     </header>
     <main>
@@ -56,4 +59,12 @@
     </main>
     <footer></footer>
   </body>
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navMenu = document.getElementById("navMenu");
+
+    menuButton.addEventListener("click", function () {
+      navMenu.classList.toggle("open");
+    });
+  </script>
 </html>

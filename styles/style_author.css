@@ -29,6 +29,10 @@ body {
   justify-content: center;
 }
 
+.menu-button {
+  display: none;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -146,7 +150,29 @@ footer > p {
     display: none;
   }
 
+  .menu-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 100;
+    padding: 0;
+  }
+
+  .menu-button img {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
   .nav-menu {
+    display: none;
     flex-direction: column;
     align-items: center;
     position: fixed;
@@ -158,7 +184,7 @@ footer > p {
   }
 
   .nav {
-    padding: 0.8vw;
+    padding: 1.1vw;
     font-size: 90%;
   }
 
@@ -178,14 +204,14 @@ footer > p {
   .home-icon {
     display: block;
     position: fixed;
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 20px;
     z-index: 3;
   }
 
   .home-icon img {
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     cursor: pointer;
   }
 

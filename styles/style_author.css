@@ -145,6 +145,11 @@ footer > p {
   text-align: center;
 }
 
+.active::before {
+  background-color: rgba(255, 255, 255, 0.17);
+  filter: blur(20px);
+}
+
 @media (max-width: 1350px) {
   .head {
     height: 0px;

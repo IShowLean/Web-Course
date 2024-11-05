@@ -1,3 +1,6 @@
+const scriptStartTime = performance.now();
+console.time('time')
+
 const menuButton = document.getElementById("menuButton");
 const navMenu = document.getElementById("navMenu");
 
@@ -36,3 +39,9 @@ menuButton.addEventListener("click", function () {
         }
     });
 })();
+
+console.timeEnd('time')
+const scriptEndTime = performance.now();
+const scriptLoadTime = scriptEndTime - scriptStartTime;
+console.log(`Время загрузки скрипта: ${scriptLoadTime.toFixed(2)} мс`);
+

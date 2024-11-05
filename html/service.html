@@ -12,10 +12,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/style_author.css" />
+    <link rel="stylesheet" href="../styles/style_constructor.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/todolist.js" defer></script>
     <title>Об авторе</title>
   </head>
   <body>
@@ -42,11 +42,17 @@
       </div>
     </header>
     <main>
-      <div class="photo">
-        <img src="../pics/author.jpg" alt="Автор сайта" />
-        <h1>Это автор сайта.</h1>
-        <p>Когда-нибудь он купит свой личный Porsche 911...</p>
-      </div>
+        <h1>Список дел</h1>
+
+        <form id="taskForm">
+            <input type="text" id="taskInput" name="task" placeholder="Введите задачу" required>
+            <button type="submit">Добавить</button>
+            <button type="button" id="saveTasks">Сохранить задачи</button>
+            <button type="button" id="loadTasks">Загрузить задачи</button>
+        </form>
+    
+        <div id="taskContainer"></div>
+      </form>
     </main>
     <footer>
       <p>

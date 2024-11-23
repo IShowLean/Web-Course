@@ -12,11 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/style_constructor.css" />
+    <link rel="stylesheet" href="../styles/style_feedback.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../scripts/todolist.js" defer></script>
-    <title>Об авторе</title>
+    <script src="../scripts/comments.js" defer></script>
+    <title>О компании</title>
   </head>
   <body>
     <header>
@@ -42,17 +42,13 @@
       </div>
     </header>
     <main>
-        <h1>Список дел</h1>
-
-        <form id="taskForm">
-            <input type="text" id="taskInput" name="task" placeholder="Введите задачу" required>
-            <button type="submit">Добавить</button>
-            <button type="button" id="saveTasks">Сохранить задачи</button>
-            <button type="button" id="loadTasks">Загрузить задачи</button>
-        </form>
-    
-        <div id="taskContainer"></div>
-      </form>
+      <h1>Что говорят о нас наши клиенты:</h1>
+      <div id="reviews-container">
+        <div id="preloader">
+          <img src="../preloaders/banana.png" alt="Loading..." />
+        </div>
+        <div id="comments" class="comments-list"></div>
+      </div>
     </main>
     <footer>
       <p>

@@ -56,3 +56,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetchComments();
 });
+
+(function () {
+    const currentPath = window.location.pathname;
+    const menuItems = document.querySelectorAll('.nav-menu a.nav');
+
+    menuItems.forEach(function (menuItem) {
+        const href = menuItem.getAttribute('href');
+        if (currentPath.includes(href)) {
+            menuItem.classList.add('active');
+        }
+    });
+})();
+
+const menuButton = document.getElementById("menuButton");
+const navMenu = document.getElementById("navMenu");
+
+menuButton.addEventListener("click", function () {
+    navMenu.classList.toggle("open");
+});
+
+
